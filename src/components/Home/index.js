@@ -21,7 +21,7 @@ const Home = () => (
             <p className="memory-matrix-heading">Memory Matrix</p>
             <img
               src="https://res.cloudinary.com/dqbiyti1d/image/upload/v1704346396/slvjhz7sxqxg1bkuipgz.png"
-              alt="card flip"
+              alt="memory matrix"
               className="memory-matrix-image"
             />
           </li>
@@ -31,7 +31,7 @@ const Home = () => (
             <p className="memory-matrix-heading">Rock Paper Scissor</p>
             <img
               src="https://res.cloudinary.com/dqbiyti1d/image/upload/v1704346397/kcjxurkdx1loidzeiz9c.png"
-              alt="emoji game"
+              alt="rock paper scissor"
               className="rock-paper-scissor-image"
             />
           </li>
@@ -40,7 +40,7 @@ const Home = () => (
           <li className="game-item">
             <img
               src="https://res.cloudinary.com/dqbiyti1d/image/upload/v1704346398/vx8katwdus8krcwo92ki.png"
-              alt="emoji game"
+              alt="card flip memory game"
               className="card-flip-game-image"
             />
           </li>
