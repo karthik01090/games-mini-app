@@ -1,5 +1,7 @@
 import {Component} from 'react'
 
+import {BiArrowBack} from 'react-icons/bi'
+
 import EmojiCard from '../EmojiCard'
 import EmojiGameNavbar from '../EmojiGameNavbar'
 import WinOrLoseCard from '../WinOrLoseCard'
@@ -86,6 +88,11 @@ class EmojiGame extends Component {
     isGameStarted: false,
   }
 
+  onClickBackButton = () => {
+    const {history} = this.props
+    history.replace('/')
+  }
+
   onClickStartPlayingButton = () => {
     this.setState({
       isGameStarted: true,
@@ -157,7 +164,12 @@ class EmojiGame extends Component {
 
   renderRulesPage = () => (
     <div className="rules-page">
-      <button type="button" className="back-button">
+      <button
+        type="button"
+        className="back-button"
+        onClick={this.onClickBackButton}
+      >
+        <BiArrowBack className="arrow-back" />
         Back
       </button>
       <div className="rules-bg-container">

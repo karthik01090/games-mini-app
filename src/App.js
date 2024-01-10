@@ -2,6 +2,7 @@ import {Route} from 'react-router-dom'
 
 import Home from './components/Home'
 import EmojiGame from './components/EmojiGame'
+import RockPaperScissorGame from './components/RockPaperScissorGame'
 
 import './App.css'
 
@@ -152,6 +153,7 @@ const App = () => (
   <>
     <Route exact path="/" component={Home} />
     <Route exact path="/emoji-game" component={EmojiGame} />
+    <Route exact path="/rock-paper-scissor" component={RockPaperScissorGame} />
   </>
 )
 export default App
