@@ -1,0 +1,131 @@
+* {
+  font-family: 'Bree Serif';
+  color: #ffffff;
+}
+
+.rules-page-bg-container-game4 {
+  background-color: #14332e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.rules-page-container-game4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.arrow-back {
+  margin-right: 10px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-heading {
+  font-family: 'Bree Serif';
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.card-flip-memory-image {
+  width: 227px;
+  height: 202px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-flip-memory-image {
+    width: 807px;
+    height: 462px;
+  }
+}
+
+.rules-list-container-game4 {
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .rules-list-container-game4 {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+  }
+}
+
+.rule-item-game4 {
+  margin-bottom: 16px;
+  line-height: 24px;
+  font-family: 'Bree Serif';
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .rule-item-game4 {
+    align-self: flex-start;
+    width: 90%;
+    margin-right: 20px;
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.start-playing-btn-game4 {
+  background-color: #ffffff;
+  color: #223a5f;
+  font-family: 'Bree Serif';
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .start-playing-btn-game4 {
+    align-self: flex-start;
+  }
+}
+
+.rules-heading-game2 {
+  font-family: 'Bree Serif';
+  font-size: 24px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .rules-heading-game2 {
+    align-self: flex-start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .rules-container {
+    align-self: flex-start;
+    width: 100%;
+  }
+}
