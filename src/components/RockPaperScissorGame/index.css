@@ -133,3 +133,71 @@
 .span-element {
   color: #facc15;
 }
+
+.rps-bg-container {
+  background-color: #223a5f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 36px;
+  padding-bottom: 20px;
+}
+
+.rps-game-container {
+  width: 90%;
+}
+
+.back-and-rules-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.back-btn-container {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  /* font-size: 16px;
+  font-weight: 400;
+  font-family: Bree Serif; */
+}
+
+.rules-btn {
+  background: transparent;
+  outline: none;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.choices-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+
+.rps-game-heading {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Bree Serif';
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.lets-pick {
+  font-size: 32px;
+}
+
+.rps-game-choice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
