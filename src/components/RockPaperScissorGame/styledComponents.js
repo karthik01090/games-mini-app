@@ -1,13 +1,8 @@
 import styled from 'styled-components'
 
 export const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #223a5f;
-  padding: 20px;
 `
 
 export const Container = styled.div`
@@ -39,6 +34,9 @@ export const BackButton = styled.button`
   font-weight: 400;
   margin-bottom: 10px;
   margin-left: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
 `
 export const ImageContainer = styled.div`
   display: flex;

@@ -8,9 +8,11 @@ import {
   GameViewContainer,
   GameButton,
   GameImage,
-  ResultImageContainer,
-  ResultName,
-  ResultText,
+  BackButton,
+  RpsGameViewContainer,
+  ButtonsContainer,
+  RulesButton,
+  RpsHeading,
 } from './styledComponents'
 
 import './index.css'
@@ -32,22 +34,16 @@ const RpsGameResultsView = props => {
   }
 
   const gameView = () => (
-    <div className="rps-game-view-container">
-      <div className="rps-game-btns-container">
-        <button
-          type="button"
-          className="back-button"
-          onClick={onClickBackButton}
-        >
+    <RpsGameViewContainer>
+      <ButtonsContainer>
+        <BackButton type="button" onClick={onClickBackButton}>
           <BiArrowBack className="arrow-back" />
           Back
-        </button>
-        <button type="button" className="rps-rules-btn">
-          Rules
-        </button>
-      </div>
-      <h1>ROCK PAPER SCISSOR</h1>
-      <h1>Let's Pick</h1>
+        </BackButton>
+        <RulesButton type="button">Rules</RulesButton>
+      </ButtonsContainer>
+      <RpsHeading>ROCK PAPER SCISSOR</RpsHeading>
+      <RpsHeading>Let's Pick</RpsHeading>
       <GameViewContainer>
         <GameButton
           type="button"
@@ -83,7 +79,7 @@ const RpsGameResultsView = props => {
           />
         </GameButton>
       </GameViewContainer>
-    </div>
+    </RpsGameViewContainer>
   )
 
   const renderResultsView = () => (

@@ -3,7 +3,6 @@ import {Component} from 'react'
 import {BiArrowBack} from 'react-icons/bi'
 
 import RpsGameResultsView from '../RpsGameResultsView'
-// import RpsScoreView from '../RpsScoreView'
 
 import {
   MainContainer,
@@ -18,8 +17,6 @@ import {
   StartPlayingBtn,
   RulesHeading,
 } from './styledComponents'
-
-// import './index.css'
 
 const choicesList = [
   {
@@ -199,7 +196,6 @@ class RockPaperScissorGame extends Component {
     const {isShow, newArray, text, score} = this.state
     return (
       <MainContainer>
-        {/* <RpsScoreView score={score} /> */}
         <RpsGameResultsView
           choicesList={choicesList}
           text={text}

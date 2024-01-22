@@ -1,3 +1,20 @@
+import {
+  RpsWinOrLoseCardBgContainer,
+  RpsWinOrLoseCardContainer,
+  RpsScoreCardContainer,
+  RpsWinOrLoseListContainer,
+  ListItem,
+  ScoreCardContainer,
+  RpsScoreCard,
+  ScoreText,
+  Score,
+  RpsResultsContainer,
+  ResultContainer,
+  ResultImage,
+  ResultTextContainer,
+  RpsPlayAgainBtn,
+} from './WinOrLoseCardComponents'
+
 import './index.css'
 
 const RpsWinOrLoseCard = props => {
@@ -7,49 +24,66 @@ const RpsWinOrLoseCard = props => {
     restartGame()
   }
 
+  let personEmojiUrl
+  let emojiUrl
+
+  switch (text) {
+    case 'YOU WON':
+      personEmojiUrl =
+        'https://res.cloudinary.com/dqbiyti1d/image/upload/v1705901542/Group_7618won-emoji_ksnmil.png'
+      emojiUrl =
+        'https://res.cloudinary.com/dqbiyti1d/image/upload/v1705901541/Emojiemoji-won_xbyljq.png'
+      break
+    case 'YOU LOSE':
+      personEmojiUrl =
+        'https://res.cloudinary.com/dqbiyti1d/image/upload/v1705901542/Group_7618lose-emoji_qlhrbc.png'
+      emojiUrl =
+        'https://res.cloudinary.com/dqbiyti1d/image/upload/v1705901542/Emojiemoji-lose_omnbwm.png'
+      break
+    default:
+      personEmojiUrl =
+        'https://res.cloudinary.com/dqbiyti1d/image/upload/v1705901542/Group_7618draw-emoji_oya7nv.png'
+      emojiUrl =
+        'https://res.cloudinary.com/dqbiyti1d/image/upload/v1705901542/Emojiemoji-draw_v3hszw.png'
+  }
+
   return (
-    <div className="rps-win-or-lose-card-bg-container">
-      <div className="rps-win-or-lose-card-container">
+    <RpsWinOrLoseCardBgContainer>
+      <RpsWinOrLoseCardContainer>
         <h1>ROCK PAPER SCISSOR</h1>
-        <div className="rps-score-card-container">
-          <ul className="rps-win-or-lose-list-container">
-            <li>Rock</li>
-            <li>Paper</li>
-            <li>Scissor</li>
-          </ul>
-          <div className="score-card-rps">
-            <p>Score</p>
-            <p>{score}</p>
-          </div>
-        </div>
-        <div className="rps-results-container">
-          <div className="result-container">
+        <RpsScoreCardContainer>
+          <RpsWinOrLoseListContainer>
+            <ListItem>Rock</ListItem>
+            <ListItem>Paper</ListItem>
+            <ListItem>Scissor</ListItem>
+          </RpsWinOrLoseListContainer>
+          <ScoreCardContainer>
+            <img src={personEmojiUrl} alt={text} />
+            <RpsScoreCard>
+              <ScoreText>Score</ScoreText>
+              <Score>{score}</Score>
+            </RpsScoreCard>
+          </ScoreCardContainer>
+        </RpsScoreCardContainer>
+        <RpsResultsContainer>
+          <ResultContainer>
             <p>You</p>
-            <img
-              src={newArray[0].imageUrl}
-              alt={newArray[0].id}
-              className="rps-result-image"
-            />
-          </div>
-          <div className="result-text-container">{text}</div>
-          <div className="result-container">
+            <ResultImage src={newArray[0].imageUrl} alt={newArray[0].id} />
+          </ResultContainer>
+          <ResultTextContainer>
+            <img src={emojiUrl} alt={text} />
+            <p>{text}</p>
+          </ResultTextContainer>
+          <ResultContainer>
             <p>Opponent</p>
-            <img
-              src={newArray[1].imageUrl}
-              alt={newArray[1].id}
-              className="rps-result-image"
-            />
-          </div>
-        </div>
-        <button
-          type="button"
-          onClick={onClickPlayAgainBtn}
-          className="rps-play-again-btn"
-        >
+            <ResultImage src={newArray[1].imageUrl} alt={newArray[1].id} />
+          </ResultContainer>
+        </RpsResultsContainer>
+        <RpsPlayAgainBtn type="button" onClick={onClickPlayAgainBtn}>
           Play Again
-        </button>
-      </div>
-    </div>
+        </RpsPlayAgainBtn>
+      </RpsWinOrLoseCardContainer>
+    </RpsWinOrLoseCardBgContainer>
   )
 }
 

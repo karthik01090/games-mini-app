@@ -1,5 +1,48 @@
 import styled from 'styled-components'
 
+export const RpsHeading = styled.h1`
+  font-weight: 400;
+  font-size: 48px;
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+  }
+`
+export const RulesButton = styled.button`
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 12px;
+  border: solid 2px #ffffff;
+  outline: none;
+`
+export const ButtonsContainer = styled.div`
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+export const RpsGameViewContainer = styled.div`
+  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+`
+
+export const BackButton = styled.button`
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+`
 export const GameViewContainer = styled.div`
   display: flex;
   flex-direction: row;
