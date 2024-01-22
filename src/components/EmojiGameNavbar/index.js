@@ -1,28 +1,38 @@
 // Write your code here.
+
+import {
+  NavBarContainer,
+  TitleWithScoreContainer,
+  LogoAndTitleContainer,
+  EmojiLogo,
+  Title,
+  ScoresContainer,
+  Score,
+} from './gameNavbarComponents'
 import './index.css'
 
 const NavBar = props => {
   const {currentScore, isGameInProgress, topScore} = props
 
   return (
-    <nav className="nav-bar-container">
-      <div className="title-with-score-container">
-        <div className="logo-and-title-container">
-          <img
-            className="emoji-logo"
+    <NavBarContainer>
+      <TitleWithScoreContainer>
+        <LogoAndTitleContainer>
+          <EmojiLogo
             src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
             alt="emoji logo"
           />
-          <h1 className="title">Emoji Game</h1>
-        </div>
+
+          <Title>Emoji Game</Title>
+        </LogoAndTitleContainer>
         {isGameInProgress && (
-          <div className="scores-container">
-            <p className="score">Score: {currentScore}</p>
-            <p className="score">Top Score: {topScore}</p>
-          </div>
+          <ScoresContainer>
+            <Score>Score: {currentScore}</Score>
+            <Score>Top Score: {topScore}</Score>
+          </ScoresContainer>
         )}
-      </div>
-    </nav>
+      </TitleWithScoreContainer>
+    </NavBarContainer>
   )
 }
 

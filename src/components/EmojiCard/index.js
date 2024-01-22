@@ -1,5 +1,5 @@
 // Write your code here.
-import './index.css'
+import {EmojiItem, EmojiBtn, EmojiIcon} from './emojiCardComponents'
 
 const EmojiCard = props => {
   const {emojiDetails, clickEmoji} = props
@@ -10,11 +10,11 @@ const EmojiCard = props => {
   }
 
   return (
-    <li className="emoji-item">
-      <button type="button" className="emoji-btn" onClick={onClickEmojiCard}>
-        <img className="emoji-icon" src={emojiUrl} alt={emojiName} />
-      </button>
-    </li>
+    <EmojiItem>
+      <EmojiBtn type="button" onClick={onClickEmojiCard}>
+        <EmojiIcon src={emojiUrl} alt={emojiName} />
+      </EmojiBtn>
+    </EmojiItem>
   )
 }
 

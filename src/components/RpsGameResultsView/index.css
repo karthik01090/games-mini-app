@@ -12,3 +12,27 @@
   border-style: none;
   outline: none;
 }
+
+.rps-game-view-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.rps-game-btns-container {
+  /* align-self: flex-start; */
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rps-rules-btn {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 12px;
+  border: solid 2px #ffffff;
+  outline: none;
+}

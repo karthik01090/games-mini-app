@@ -6,7 +6,24 @@ import EmojiCard from '../EmojiCard'
 import EmojiGameNavbar from '../EmojiGameNavbar'
 import WinOrLoseCard from '../WinOrLoseCard'
 
-import './index.css'
+import {
+  EmojisListContainer,
+  RulesPage,
+  BackButton,
+  RulesBgContainer,
+  ImageContainer,
+  EmojiGameHeading,
+  EmojiGameImage,
+  RulesContainer,
+  RulesHeading,
+  RulesList,
+  RuleItem,
+  StartPlayingBtn,
+  AppContainer,
+  EmojiGameBody,
+} from './emojiGameStyles'
+
+// import './index.css'
 
 const emojisList = [
   {
@@ -150,7 +167,7 @@ class EmojiGame extends Component {
     const shuffledEmojisList = this.getShuffledEmojisList()
 
     return (
-      <ul className="emojis-list-container">
+      <EmojisListContainer className="emojis-list-container">
         {shuffledEmojisList.map(emojiObject => (
           <EmojiCard
             key={emojiObject.id}
@@ -158,67 +175,55 @@ class EmojiGame extends Component {
             clickEmoji={this.clickEmoji}
           />
         ))}
-      </ul>
+      </EmojisListContainer>
     )
   }
 
   renderRulesPage = () => (
-    <div className="rules-page">
-      <button
-        type="button"
-        className="back-button"
-        onClick={this.onClickBackButton}
-      >
-        <BiArrowBack className="arrow-back" />
-        Back
-      </button>
-      <div className="rules-bg-container">
-        <div className="image-container">
-          <img
+    <RulesPage>
+      <BackButton onClick={this.onClickBackButton}>
+        <BiArrowBack className="arrow-back" /> Back
+      </BackButton>
+      <RulesBgContainer>
+        <ImageContainer>
+          <EmojiGameImage
             src="https://res.cloudinary.com/dqbiyti1d/image/upload/v1704420553/Asset_1_4x_1rules-emoji-image_rxth3e.png"
             alt="emoji game"
-            className="emoji-game-image"
           />
-          <h1 className="emoji-game-heading">Emoji Game</h1>
-        </div>
-        <div className="rules-container">
-          <h1 className="rules-heading">Rules</h1>
-          <ul className="rules-list">
-            <li className="rule-item">
-              User should be able to see the list of Emojis
-            </li>
-            <li className="rule-item">
+          <EmojiGameHeading>Emoji Game</EmojiGameHeading>
+        </ImageContainer>
+        <RulesContainer>
+          <RulesHeading>Rules</RulesHeading>
+          <RulesList>
+            <RuleItem>User should be able to see the list of Emojis</RuleItem>
+            <RuleItem>
               When the user clicks any one of the Emoji for the first time, then
               the count of the score should be incremented by 1 and the List of
               emoji cards should be shuffled.
-            </li>
-            <li className="rule-item">
+            </RuleItem>
+            <RuleItem>
               This process should be repeated every time the user clicks on an
               emoji card
-            </li>
-            <li className="rule-item">
+            </RuleItem>
+            <RuleItem>
               When the user clicks on all Emoji cards without clicking any of it
               twice, then the user will win the game
-            </li>
-            <li className="rule-item">
+            </RuleItem>
+            <RuleItem>
               When the user clicks on the same Emoji for the second time, then
               the user will lose the game.
-            </li>
-            <li className="rule-item">
+            </RuleItem>
+            <RuleItem>
               Once the game is over, the user will be redirected to the results
               page.
-            </li>
-          </ul>
-          <button
-            className="start-playing-btn"
-            type="button"
-            onClick={this.onClickStartPlayingButton}
-          >
+            </RuleItem>
+          </RulesList>
+          <StartPlayingBtn onClick={this.onClickStartPlayingButton}>
             Start Playing
-          </button>
-        </div>
-      </div>
-    </div>
+          </StartPlayingBtn>
+        </RulesContainer>
+      </RulesBgContainer>
+    </RulesPage>
   )
 
   render() {
@@ -230,16 +235,16 @@ class EmojiGame extends Component {
     } = this.state
 
     return isGameStarted ? (
-      <div className="app-container">
+      <AppContainer>
         <EmojiGameNavbar
           currentScore={clickedEmojisList.length}
           isGameInProgress={isGameInProgress}
           topScore={topScore}
         />
-        <div className="emoji-game-body">
+        <EmojiGameBody>
           {isGameInProgress ? this.renderEmojisList() : this.renderScoreCard()}
-        </div>
-      </div>
+        </EmojiGameBody>
+      </AppContainer>
     ) : (
       this.renderRulesPage()
     )
