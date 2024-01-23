@@ -15,8 +15,6 @@ import {
   RpsPlayAgainBtn,
 } from './WinOrLoseCardComponents'
 
-import './index.css'
-
 const RpsWinOrLoseCard = props => {
   const {newArray, text, restartGame, score} = props
 

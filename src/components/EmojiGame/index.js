@@ -23,8 +23,6 @@ import {
   EmojiGameBody,
 } from './emojiGameStyles'
 
-// import './index.css'
-
 const emojisList = [
   {
     id: 0,

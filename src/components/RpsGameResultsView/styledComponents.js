@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const RpsHeading = styled.h1`
   font-weight: 400;
   font-size: 48px;
+  color: #fff;
+  font-family: Bree Serif;
   @media screen and (max-width: 767px) {
     font-size: 24px;
   }
@@ -13,6 +15,8 @@ export const RulesButton = styled.button`
   border-radius: 12px;
   border: solid 2px #ffffff;
   outline: none;
+  color: #fff;
+  font-family: Bree Serif;
 `
 export const ButtonsContainer = styled.div`
   width: 90%;

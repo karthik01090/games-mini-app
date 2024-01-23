@@ -1,9 +1,7 @@
-* {
-  font-family: 'Bree Serif';
-  color: #ffffff;
-}
+import styled from 'styled-components'
+import {BiArrowBack} from 'react-icons/bi'
 
-.rules-page-bg-container {
+export const RulesPageBgContainer = styled.div`
   background-color: #1a202c;
   min-height: 100vh;
   display: flex;
@@ -11,16 +9,16 @@
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-}
+`
 
-.rules-page-container {
+export const RulesPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
-}
+`
 
-.back-button {
+export const BackButton = styled.button`
   display: flex;
   align-items: center;
   align-self: flex-start;
@@ -29,61 +27,52 @@
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 10px;
-}
+  border: none;
+  outline: none;
+  background: transparent;
+`
 
-.arrow-back {
+export const ArrowBack = styled(BiArrowBack)`
   margin-right: 10px;
-}
+`
 
-.image-container {
+export const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+`
 
-.game-heading {
+export const GameHeading = styled.h1`
   font-family: 'Bree Serif';
   font-weight: 400;
   font-size: 24px;
   color: #ffffff;
   margin-bottom: 20px;
-}
+`
 
-.memory-matrix-game-image {
+export const MemoryMatrixGameImage = styled.img`
   width: 312px;
   height: 233px;
-}
 
-@media screen and (min-width: 768px) {
-  .memory-matrix-game-image {
+  @media screen and (min-width: 768px) {
     width: 484px;
     height: 361px;
   }
-}
+`
 
-.rules-list-container-game3 {
+export const RulesContainerGame2 = styled.div`
   margin-top: 16px;
-}
+`
 
-@media screen and (min-width: 768px) {
-  .rules-list-container-game3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
-
-.rule-item-game3 {
+export const RuleItemGame2 = styled.li`
   margin-bottom: 16px;
   line-height: 24px;
   font-family: 'Bree Serif';
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
-}
 
-@media screen and (min-width: 768px) {
-  .rule-item-game3 {
+  @media screen and (min-width: 768px) {
     align-self: flex-start;
     width: 90%;
     margin-right: 20px;
@@ -91,42 +80,40 @@
     font-size: 20px;
     line-height: 32px;
   }
-}
+`
 
-.start-playing-btn-game3 {
+export const StartPlayingButtonGame2 = styled.button`
   background-color: #467aff;
   color: #ffffff;
   font-family: 'Bree Serif';
-  padding: 8px, 16px, 8px, 16px;
+  padding: 10px;
   border: none;
   outline: none;
   border-radius: 12px;
-  width: 104px;
-  height: 32px;
-}
+  width: 134px;
+  height: 40px;
 
-@media screen and (min-width: 768px) {
-  .start-playing-btn-game3 {
+  @media screen and (min-width: 768px) {
     align-self: flex-start;
   }
-}
+`
 
-.rules-heading-game2 {
+export const RulesHeadingGame2 = styled.h1`
   font-family: 'Bree Serif';
   font-size: 24px;
   font-weight: 400;
   color: #ffffff;
-}
 
-@media screen and (min-width: 768px) {
-  .rules-heading-game2 {
+  @media screen and (min-width: 768px) {
     align-self: flex-start;
   }
-}
+`
 
-@media screen and (min-width: 768px) {
-  .rules-container {
-    align-self: flex-start;
-    width: 100%;
+export const RulesListContainer = styled.ul`
+  margin-top: 16px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
-}
+`

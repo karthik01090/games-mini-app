@@ -9,7 +9,6 @@ import {
   ScoresContainer,
   Score,
 } from './gameNavbarComponents'
-import './index.css'
 
 const NavBar = props => {
   const {currentScore, isGameInProgress, topScore} = props
