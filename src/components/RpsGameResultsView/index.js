@@ -4,18 +4,7 @@ import {BiArrowBack} from 'react-icons/bi'
 
 import RpsWinOrLoseCard from '../RpsWinOrLoseCard'
 
-import {
-  GameViewContainer,
-  GameButton,
-  GameImage,
-  BackButton,
-  RpsGameViewContainer,
-  ButtonsContainer,
-  RulesButton,
-  RpsHeading,
-} from './styledComponents'
-
-import './index.css'
+import './rpsGameResultsView.css'
 
 const RpsGameResultsView = props => {
   const {
@@ -28,58 +17,52 @@ const RpsGameResultsView = props => {
     restartGame,
   } = props
 
-  const onClickBackButton = () => {
-    const {history} = props
-    history.replace('/')
-  }
-
   const gameView = () => (
-    <RpsGameViewContainer>
-      <ButtonsContainer>
-        <BackButton type="button" onClick={onClickBackButton}>
-          <BiArrowBack className="arrow-back" />
-          Back
-        </BackButton>
-        <RulesButton type="button">Rules</RulesButton>
-      </ButtonsContainer>
-      <RpsHeading>ROCK PAPER SCISSOR</RpsHeading>
-      <RpsHeading>Let's Pick</RpsHeading>
-      <GameViewContainer>
-        <GameButton
+    <div className="rps-game-view-container">
+      <h1 className="rps-heading">Rock Paper Scissor</h1>
+      <h1 className="rps-heading">Let's Pick</h1>
+      <div className="game-view-container">
+        <button
+          className="game-button"
           type="button"
           data-testid="rockButton"
           onClick={() => checkResult(choicesList[0].id)}
         >
-          <GameImage
+          <img
             src={choicesList[0].imageUrl}
             alt={choicesList[0].id}
             key={choicesList[0].id}
+            className="game-image"
           />
-        </GameButton>
-        <GameButton
+        </button>
+        <button
+          className="game-button"
           type="button"
           data-testid="scissorButton"
           onClick={() => checkResult(choicesList[1].id)}
         >
-          <GameImage
+          <img
+            className="game-image"
             src={choicesList[1].imageUrl}
             alt={choicesList[1].id}
             key={choicesList[1].id}
           />
-        </GameButton>
-        <GameButton
+        </button>
+        <button
+          className="game-button"
           type="button"
           data-testid="paperButton"
           onClick={() => checkResult(choicesList[2].id)}
         >
-          <GameImage
+          <img
+            className="game-image"
             src={choicesList[2].imageUrl}
             alt={choicesList[2].id}
             key={choicesList[2].id}
           />
-        </GameButton>
-      </GameViewContainer>
-    </RpsGameViewContainer>
+        </button>
+      </div>
+    </div>
   )
 
   const renderResultsView = () => (

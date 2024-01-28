@@ -1,0 +1,50 @@
+.card-flip-game-container {
+  background-image: url('https://res.cloudinary.com/dxbi2ob2k/image/upload/v1628409152/cardFlip/44350_1bg_lpgvsn.png');
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+  overflow: auto;
+}
+.card-flip-game-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+}
+.card-flip-game-heading {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  color: #ffffff;
+}
+.card-flip-score-content {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  height: 80%;
+  width: 80%;
+}
+.card-flip-para {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+}
+.card-flip-list-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  background-color: #154315;
+  border-radius: 15px;
+}

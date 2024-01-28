@@ -1,0 +1,168 @@
+.rules-page-bg-container {
+  background-color: #223a5f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.rules-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.game-heading {
+  font-family: 'Bree Serif';
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.rock-paper-scissor-image {
+  width: 227px;
+  height: 202px;
+}
+
+@media screen and (min-width: 768px) {
+  .rock-paper-scissor-image {
+    width: 266px;
+    height: 237px;
+  }
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rules-heading {
+  font-family: 'Bree Serif';
+  font-size: 24px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .rules-heading {
+    align-self: flex-start;
+  }
+}
+.rps-rules-list-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.rps-rule-item {
+  margin-bottom: 16px;
+  line-height: 24px;
+  font-family: 'Bree Serif';
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .rps-rule-item {
+    align-self: flex-start;
+    width: 40%;
+    margin-right: 20px;
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.start-playing-btn {
+  background-color: #ffffff;
+  color: #223a5f;
+  font-family: 'Bree Serif';
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .start-playing-btn {
+    align-self: flex-start;
+  }
+}
+
+.main-container {
+  min-height: 100vh;
+  background-color: #223a5f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.rules-container-game2 {
+  width: 100%;
+}
+
+.popup-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-close-button {
+  align-self: flex-end;
+}
+
+.popup-container {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-heading {
+  text-align: center;
+  font-family: Bree Serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1e293b;
+}
+
+.popup-list-item {
+  font-family: Bree Serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #475569;
+}
+
+.trigger-button {
+  background: transparent;
+  color: #ffffff;
+  width: 62px;
+  height: 32px;
+  border: solid 2px #ffffff;
+  border-radius: 12px;
+}

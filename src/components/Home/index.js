@@ -1,61 +1,53 @@
 import {Link} from 'react-router-dom'
 
-import {
-  HomePageBgContainer,
-  GamesContainer,
-  GamesHeading,
-  GamesListContainer,
-  GameItem,
-  EmojiImage,
-  MemoryMatrixImage,
-  MemoryMatrixHeading,
-  RockPaperScissorImage,
-  CardFlipGameImage,
-  LinkItem,
-} from './HomeStyles'
+import './home.css'
 
 const Home = () => (
-  <HomePageBgContainer>
-    <GamesContainer>
-      <GamesHeading>Games</GamesHeading>
-      <GamesListContainer>
-        <Link to="/emoji-game" className={LinkItem}>
-          <GameItem>
-            <EmojiImage
+  <div className="home-page-bg-container">
+    <div className="games-container">
+      <h1 className="games-heading">Games</h1>
+      <ul className="games-list-container">
+        <Link to="/emoji-game" className="link-item">
+          <li className="game-item">
+            <img
               src="https://res.cloudinary.com/dqbiyti1d/image/upload/v1704346399/nkppr3kcvpgr53zraf0b.png"
               alt="emoji game"
+              className="emoji-image"
             />
-          </GameItem>
+          </li>
         </Link>
-        <Link to="/memory-matrix" className={LinkItem}>
-          <GameItem>
-            <MemoryMatrixHeading>Memory Matrix</MemoryMatrixHeading>
-            <MemoryMatrixImage
+        <Link to="/memory-matrix" className="link-item">
+          <li className="game-item">
+            <h1 className="memory-matrix-heading">Memory Matrix</h1>
+            <img
               src="https://res.cloudinary.com/dqbiyti1d/image/upload/v1704346396/slvjhz7sxqxg1bkuipgz.png"
               alt="memory matrix"
+              className="memory-matrix-image-home"
             />
-          </GameItem>
+          </li>
         </Link>
-        <Link to="/rock-paper-scissor" className={LinkItem}>
-          <GameItem>
-            <MemoryMatrixHeading>Rock Paper Scissor</MemoryMatrixHeading>
-            <RockPaperScissorImage
+        <Link to="/rock-paper-scissor" className="link-item">
+          <li className="game-item">
+            <h1 className="memory-matrix-heading">Rock Paper Scissor</h1>
+            <img
               src="https://res.cloudinary.com/dqbiyti1d/image/upload/v1704346397/kcjxurkdx1loidzeiz9c.png"
               alt="rock paper scissor"
+              className="rock-paper-scissor-image"
             />
-          </GameItem>
+          </li>
         </Link>
-        <Link to="/card-flip-memory-game" className={LinkItem}>
-          <GameItem>
-            <CardFlipGameImage
+        <Link to="/card-flip-memory-game" className="link-item">
+          <li className="game-item">
+            <img
               src="https://res.cloudinary.com/dqbiyti1d/image/upload/v1704346398/vx8katwdus8krcwo92ki.png"
               alt="card flip memory game"
+              className="card-flip-memory-image"
             />
-          </GameItem>
+          </li>
         </Link>
-      </GamesListContainer>
-    </GamesContainer>
-  </HomePageBgContainer>
+      </ul>
+    </div>
+  </div>
 )
 
 export default Home

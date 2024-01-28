@@ -1,19 +1,8 @@
 import {Component} from 'react'
 
-import {
-  RulesPageBgContainer,
-  RulesPageContainer,
-  BackButton,
-  ArrowBack,
-  ImageContainer,
-  GameHeading,
-  MemoryMatrixGameImage,
-  RulesContainerGame2,
-  RuleItemGame2,
-  StartPlayingButtonGame2,
-  RulesHeadingGame2,
-  RulesListContainer,
-} from './memoryMatrixStyledComponents'
+import {BiArrowBack} from 'react-icons/bi'
+
+import './memoryMatrixGame.css'
 
 class MemoryMatrixGame extends Component {
   onClickBackButton = () => {
@@ -23,65 +12,70 @@ class MemoryMatrixGame extends Component {
 
   render() {
     return (
-      <RulesPageBgContainer>
-        <RulesPageContainer>
-          <BackButton type="button" onClick={this.onClickBackButton}>
-            <ArrowBack />
+      <div className="rules-page-bg-container">
+        <div className="rules-page-container">
+          <button
+            type="button"
+            onClick={this.onClickBackButton}
+            className="back-button"
+          >
+            <BiArrowBack />
             Back
-          </BackButton>
-          <ImageContainer>
-            <GameHeading>Memory Matrix</GameHeading>
-            <MemoryMatrixGameImage
+          </button>
+          <div className="image-container">
+            <h1 className="game-heading">Memory Matrix</h1>
+            <img
               src="https://res.cloudinary.com/dqbiyti1d/image/upload/v1704346396/slvjhz7sxqxg1bkuipgz.png"
               alt="memory matrix"
+              className="memory-matrix-image"
             />
-          </ImageContainer>
-          <RulesContainerGame2>
-            <RulesHeadingGame2>Rules</RulesHeadingGame2>
-            <RulesListContainer>
+          </div>
+          <div className="rules-container-mmg">
+            <h1 className="rules-heading">Rules</h1>
+            <ul className="rules-list-container-mmg">
               <div>
-                <RuleItemGame2>
+                <li className="rule-item">
                   In each level of the Game, Users should be able to see the
                   Grid with (N X N) size starting from 3 and the grid will
                   highlight N cells in Blue, the N highlighted cells will be
                   picked randomly.
-                </RuleItemGame2>
-                <RuleItemGame2>
+                </li>
+                <li className="rule-item">
                   The highlighted cells will remain N seconds for the user to
                   memorize the cells. At this point, the user should not be able
                   to perform any action.
-                </RuleItemGame2>
-                <RuleItemGame2>
+                </li>
+                <li className="rule-item">
                   After N seconds, the grid will clear the N highlighted cells.
-                </RuleItemGame2>
+                </li>
               </div>
               <div>
-                <RuleItemGame2>
+                <li className="rule-item">
                   At N seconds, the user can click on any cell. Clicking on a
                   cell that was highlighted before it will turn blue. Clicking
                   on the other cells that were not highlighted before then will
                   turn to red.
-                </RuleItemGame2>
-                <RuleItemGame2>
+                </li>
+                <li className="rule-item">
                   The user should be promoted to the next level if they guess
                   all N cells correctly in one attempt.
-                </RuleItemGame2>
-                <RuleItemGame2>
+                </li>
+                <li className="rule-item">
                   The user should be taken to the results page if the user
                   clicks on the wrong cell.
-                </RuleItemGame2>
-                <RuleItemGame2>
+                </li>
+                <li className="rule-item">
                   If the user completed all the levels, then the user should be
                   taken to the results page.
-                </RuleItemGame2>
+                </li>
               </div>
-            </RulesListContainer>
-          </RulesContainerGame2>
-          <StartPlayingButtonGame2 type="button">
+            </ul>
+          </div>
+          <button type="button" className="start-playing-btn">
             Start Playing
-          </StartPlayingButtonGame2>
-        </RulesPageContainer>
-      </RulesPageBgContainer>
+          </button>
+        </div>
+      </div>
     )
   }
 }

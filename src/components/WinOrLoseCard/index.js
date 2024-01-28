@@ -1,14 +1,4 @@
-// Write your code here.
-import {
-  WinOrLoseCardContainer,
-  DetailsSection,
-  GameStatus,
-  CurrentScoreLabel,
-  CurrentScoreValue,
-  PlayAgainButton,
-  ImageSection,
-  WinOrLoseImage,
-} from './winOrLoseCardStyledComponents'
+import './winOrLoseCard.css'
 
 const LOSE_IMAGE = 'https://assets.ccbp.in/frontend/react-js/lose-game-img.png'
 const WON_IMAGE = 'https://assets.ccbp.in/frontend/react-js/won-game-img.png'
@@ -18,19 +8,26 @@ const WinOrLoseCard = props => {
   const imageUrl = isWon ? WON_IMAGE : LOSE_IMAGE
   const gameStatus = isWon ? 'You Won' : 'You Lose'
   const scoreLabel = isWon ? 'Best Score' : 'Score'
+  const imageAltText = isWon ? 'won' : 'lose'
 
   return (
-    <WinOrLoseCardContainer>
-      <DetailsSection>
-        <GameStatus>{gameStatus}</GameStatus>
-        <CurrentScoreLabel>{scoreLabel}</CurrentScoreLabel>
-        <CurrentScoreValue>{score}/12</CurrentScoreValue>
-        <PlayAgainButton onClick={onClickPlayAgain}>Play Again</PlayAgainButton>
-      </DetailsSection>
-      <ImageSection>
-        <WinOrLoseImage src={imageUrl} alt="win or lose" />
-      </ImageSection>
-    </WinOrLoseCardContainer>
+    <div className="win-or-lose-card">
+      <div className="details-section">
+        <h1 className="game-status">{gameStatus}</h1>
+        <p className="current-score-label">{scoreLabel}</p>
+        <p className="current-score-value">{score}/12</p>
+        <button
+          type="button"
+          className="play-again-button"
+          onClick={onClickPlayAgain}
+        >
+          Play Again
+        </button>
+      </div>
+      <div className="image-section">
+        <img className="win-or-lose-image" src={imageUrl} alt={imageAltText} />
+      </div>
+    </div>
   )
 }
 

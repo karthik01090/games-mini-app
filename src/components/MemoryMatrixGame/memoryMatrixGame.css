@@ -1,7 +1,4 @@
-import styled from 'styled-components'
-import {BiArrowBack} from 'react-icons/bi'
-
-export const RulesPageBgContainer = styled.div`
+.rules-page-bg-container {
   background-color: #1a202c;
   min-height: 100vh;
   display: flex;
@@ -9,16 +6,16 @@ export const RulesPageBgContainer = styled.div`
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-`
+}
 
-export const RulesPageContainer = styled.div`
+.rules-page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
-`
+}
 
-export const BackButton = styled.button`
+.back-button {
   display: flex;
   align-items: center;
   align-self: flex-start;
@@ -30,49 +27,77 @@ export const BackButton = styled.button`
   border: none;
   outline: none;
   background: transparent;
-`
+}
 
-export const ArrowBack = styled(BiArrowBack)`
-  margin-right: 10px;
-`
-
-export const ImageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-export const GameHeading = styled.h1`
+.game-heading {
   font-family: 'Bree Serif';
   font-weight: 400;
   font-size: 24px;
   color: #ffffff;
   margin-bottom: 20px;
-`
+}
 
-export const MemoryMatrixGameImage = styled.img`
+.memory-matrix-image {
   width: 312px;
   height: 233px;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .memory-matrix-image {
     width: 484px;
     height: 361px;
   }
-`
+}
 
-export const RulesContainerGame2 = styled.div`
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rules-heading {
+  font-family: 'Bree Serif';
+  font-size: 24px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .rules-heading {
+    align-self: flex-start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .rules-heading {
+    align-self: flex-start;
+  }
+}
+
+.rules-list-container-mmg {
+  width: 100%;
   margin-top: 16px;
-`
+}
 
-export const RuleItemGame2 = styled.li`
+@media screen and (min-width: 768px) {
+  .rules-list-container-mmg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.rule-item {
   margin-bottom: 16px;
   line-height: 24px;
   font-family: 'Bree Serif';
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .rule-item {
     align-self: flex-start;
     width: 90%;
     margin-right: 20px;
@@ -80,9 +105,9 @@ export const RuleItemGame2 = styled.li`
     font-size: 20px;
     line-height: 32px;
   }
-`
+}
 
-export const StartPlayingButtonGame2 = styled.button`
+.start-playing-btn {
   background-color: #467aff;
   color: #ffffff;
   font-family: 'Bree Serif';
@@ -92,28 +117,15 @@ export const StartPlayingButtonGame2 = styled.button`
   border-radius: 12px;
   width: 134px;
   height: 40px;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .start-playing-btn {
     align-self: flex-start;
   }
-`
+}
 
-export const RulesHeadingGame2 = styled.h1`
-  font-family: 'Bree Serif';
-  font-size: 24px;
-  font-weight: 400;
-  color: #ffffff;
-
-  @media screen and (min-width: 768px) {
-    align-self: flex-start;
-  }
-`
-
-export const RulesListContainer = styled.ul`
+.rules-container-mmg {
   margin-top: 16px;
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-`
+  width: 100%;
+}

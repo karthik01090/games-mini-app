@@ -3,20 +3,9 @@ import {Component} from 'react'
 import {BiArrowBack} from 'react-icons/bi'
 
 import RpsGameResultsView from '../RpsGameResultsView'
+import ButtonsHeaderRps from '../ButtonsHeaderRps'
 
-import {
-  MainContainer,
-  RulesPageContainer,
-  RulesPageBgContainer,
-  BackButton,
-  ImageContainer,
-  GameHeading,
-  RockPaperScissorImage,
-  RulesListContainer,
-  RuleItem,
-  StartPlayingBtn,
-  RulesHeading,
-} from './styledComponents'
+import './rpsGame.css'
 
 const choicesList = [
   {
@@ -109,93 +98,102 @@ class RockPaperScissorGame extends Component {
   }
 
   renderRockPaperScissorGameRulesPage = () => (
-    <RulesPageBgContainer>
-      <RulesPageContainer>
-        <BackButton type="button" onClick={this.onClickBackButton}>
-          <BiArrowBack className="arrow-back" />
-          Back
-        </BackButton>
-        <ImageContainer>
-          <GameHeading>ROCK PAPER SCISSOR</GameHeading>
-          <RockPaperScissorImage
+    <div className="rules-page-bg-container">
+      <div className="rules-page-container">
+        <div className="buttons-container">
+          <button
+            type="button"
+            onClick={this.onClickBackButton}
+            className="back-button"
+          >
+            <BiArrowBack className="arrow-back" />
+            Back
+          </button>
+        </div>
+        <div className="image-container">
+          <h1 className="game-heading">ROCK PAPER SCISSOR</h1>
+          <img
             src="https://res.cloudinary.com/dqbiyti1d/image/upload/v1704346397/kcjxurkdx1loidzeiz9c.png"
             alt="rock paper scissor"
+            className="rock-paper-scissor-image"
           />
-        </ImageContainer>
+        </div>
         <div className="rules-container-game2">
-          <RulesHeading>Rules</RulesHeading>
-          <RulesListContainer>
-            <RuleItem>
+          <h1 className="rules-heading">Rules</h1>
+          <ul className="rps-rules-list-container">
+            <li className="rps-rule-item">
               The game result should be based on user and user opponent choices
-            </RuleItem>
-            <RuleItem>
+            </li>
+            <li className="rps-rule-item">
               When the user choice is rock and his opponent choice is rock then
               the result will be
               <span className="span-element"> IT IS DRAW</span>
-            </RuleItem>
-            <RuleItem>
+            </li>
+            <li className="rps-rule-item">
               When the user choice is paper and his opponent choice is rock then
               the result will be <span className="span-element"> YOU WON</span>
-            </RuleItem>
-            <RuleItem>
+            </li>
+            <li className="rps-rule-item">
               When the user choice is a scissor and his opponent choice is rock
               then the result will be{' '}
               <span className="span-element"> YOU LOSE</span>
-            </RuleItem>
-            <RuleItem>
+            </li>
+            <li className="rps-rule-item">
               When the user choice is paper and his opponent choice is paper
               then the result will be{' '}
               <span className="span-element"> IT IS DRAW</span>
-            </RuleItem>
-            <RuleItem>
+            </li>
+            <li className="rps-rule-item">
               When the user choice is scissors and his opponent choice is paper
               then the result will be{' '}
               <span className="span-element"> YOU WON</span>
-            </RuleItem>
-            <RuleItem>
+            </li>
+            <li className="rps-rule-item">
               When the user choice is rock and his opponent choice is scissors
               then the result will be{' '}
               <span className="span-element"> YOU WON</span>
-            </RuleItem>
-            <RuleItem>
+            </li>
+            <li className="rps-rule-item">
               When the user choice is paper and his opponent choice is scissors
               then the result will be{' '}
               <span className="span-element"> YOU LOSE</span>
-            </RuleItem>
-            <RuleItem>
+            </li>
+            <li className="rps-rule-item">
               When the user choice is scissors and his opponent choice is
               scissors then the result will be{' '}
               <span className="span-element"> IT IS DRAW</span>
-            </RuleItem>
-            <RuleItem>
+            </li>
+            <li className="rps-rule-item">
               When the result is <span className="span-element"> YOU WON</span>,
               then the count of the score should be incremented by 1
-            </RuleItem>
-            <RuleItem>
+            </li>
+            <li className="rps-rule-item">
               When the result is{' '}
               <span className="span-element"> IT IS DRAW</span>, then the count
               of the score should be the same
-            </RuleItem>
-            <RuleItem>
+            </li>
+            <li className="rps-rule-item">
               When the result is <span className="span-element"> YOU LOSE</span>
               , then the count of the score should be decremented by 1.
-            </RuleItem>
-          </RulesListContainer>
-          <StartPlayingBtn
+            </li>
+          </ul>
+          <button
             type="button"
             onClick={this.onStartRockPaperScissorGame}
+            className="start-playing-btn"
           >
             Start Playing
-          </StartPlayingBtn>
+          </button>
         </div>
-      </RulesPageContainer>
-    </RulesPageBgContainer>
+      </div>
+    </div>
   )
 
   renderRockPaperScissorGame = () => {
     const {isShow, newArray, text, score} = this.state
     return (
-      <MainContainer>
+      <div className="main-container">
+        <ButtonsHeaderRps />
         <RpsGameResultsView
           choicesList={choicesList}
           text={text}
@@ -205,7 +203,7 @@ class RockPaperScissorGame extends Component {
           restartGame={this.restartGame}
           score={score}
         />
-      </MainContainer>
+      </div>
     )
   }
 

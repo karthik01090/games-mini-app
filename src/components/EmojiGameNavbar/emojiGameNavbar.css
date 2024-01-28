@@ -1,56 +1,60 @@
-import styled from 'styled-components'
-
-export const NavBarContainer = styled.nav`
+.nav-bar-container {
   display: flex;
   justify-content: center;
   background-color: #ffffff33;
   padding: 8px;
-`
+}
 
-export const TitleWithScoreContainer = styled.div`
+.title-with-score-container {
   display: flex;
   justify-content: space-between;
   flex-basis: 80%;
   max-width: 1000px;
-`
+}
 
-export const LogoAndTitleContainer = styled.div`
+.logo-and-title-container {
   display: flex;
   align-items: center;
-`
+}
 
-export const EmojiLogo = styled.img`
+.emoji-logo {
   width: 24px;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .emoji-logo {
     width: 48px;
   }
-`
+}
 
-export const Title = styled.h1`
+.title {
   color: #ffffff;
   font-family: 'Roboto';
   font-size: 16px;
   font-weight: bold;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .title {
     font-size: 24px;
   }
-`
+}
 
-export const ScoresContainer = styled.div`
+.scores-container {
   display: flex;
-`
+}
 
-export const Score = styled.p`
+.score {
   color: #ffffff;
   font-family: 'Roboto';
   font-size: 16px;
   font-weight: 500;
   margin-left: 16px;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .score {
     font-size: 24px;
     margin-left: 32px;
   }
-`
+}

@@ -1,44 +1,43 @@
-import styled from 'styled-components'
-
-export const HomePageBgContainer = styled.div`
+.home-page-bg-container {
   background-image: linear-gradient(to right, #834d9b, #d04ed6);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-`
+}
 
-export const GamesContainer = styled.div`
+.game-container {
   margin-top: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+}
 
-export const GamesHeading = styled.h1`
+.games-heading {
   font-family: 'Roboto';
   font-weight: 700;
   font-size: 32px;
   text-align: center;
   color: #f8fafc;
-`
+}
 
-export const GamesListContainer = styled.ul`
+.games-list-container {
   margin-top: 32px;
+  padding-left: 0;
+}
 
-  @media screen and (max-width: 768px) {
-    padding-left: 0;
-  }
-
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .games-list-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    width: 100%;
   }
-`
+}
 
-export const GameItem = styled.li`
+.game-item {
   list-style-type: none;
   width: 312px;
   height: 176px;
@@ -49,59 +48,72 @@ export const GameItem = styled.li`
   align-items: center;
   justify-content: center;
   border-radius: 12px;
+}
 
-  @media screen and (min-width: 778px) {
+@media screen and (min-width: 778px) {
+  .game-item {
     width: 554px;
     height: 280px;
     margin-right: 24px;
   }
-`
+}
 
-export const EmojiImage = styled.img`
+.emoji-image {
   width: 128px;
   height: 140px;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .emoji-image {
     width: 224px;
     height: 232px;
   }
-`
+}
 
-export const MemoryMatrixImage = styled.img`
+.memory-matrix-image-home {
   width: 145px;
   height: 108px;
-  @media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 768px) {
+  .memory-matrix-image-home {
     width: 236px;
     height: 176px;
   }
-`
+}
 
-export const RockPaperScissorImage = styled.img`
-  width: 121px;
-  height: 98px;
-  @media screen and (min-width: 768px) {
-    width: 197px;
-    height: 176px;
-  }
-`
-
-export const CardFlipGameImage = styled.img`
+.card-flip-memory-image {
   width: 264;
   height: 143px;
-  @media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 768px) {
+  .card-flip-memory-image {
     width: 434px;
     height: 232px;
   }
-`
+}
 
-export const LinkItem = styled.link`
+.rock-paper-scissor-image {
+  width: 121px;
+  height: 98px;
+}
+
+@media screen and (min-width: 768px) {
+  .rock-paper-scissor-image {
+    width: 197px;
+    height: 176px;
+  }
+}
+
+.link-item {
   text-decoration: none;
-`
+}
 
-export const MemoryMatrixHeading = styled.h1`
+.memory-matrix-heading {
   font-family: 'Bree Serif';
   font-weight: 400;
   font-size: 16px;
   color: #334155;
   margin-bottom: 12px;
-`
+}
