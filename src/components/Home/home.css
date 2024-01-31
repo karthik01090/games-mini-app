@@ -82,13 +82,13 @@
   }
 }
 
-.card-flip-memory-image {
+.card-flip-memory-image-home {
   width: 264;
   height: 143px;
 }
 
 @media screen and (min-width: 768px) {
-  .card-flip-memory-image {
+  .card-flip-memory-image-home {
     width: 434px;
     height: 232px;
   }

@@ -41,7 +41,7 @@ const Home = () => (
             <img
               src="https://res.cloudinary.com/dqbiyti1d/image/upload/v1704346398/vx8katwdus8krcwo92ki.png"
               alt="card flip memory game"
-              className="card-flip-memory-image"
+              className="card-flip-memory-image-home"
             />
           </li>
         </Link>
