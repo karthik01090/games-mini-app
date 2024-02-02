@@ -5,6 +5,8 @@
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  background-image: url('https://res.cloudinary.com/dxbi2ob2k/image/upload/v1628409152/cardFlip/44350_1bg_lpgvsn.png');
+  background-size: cover;
 }
 
 .card-flip-game {
@@ -34,8 +36,6 @@
 }
 
 .card-flip-game-container {
-  background-image: url('https://res.cloudinary.com/dxbi2ob2k/image/upload/v1628409152/cardFlip/44350_1bg_lpgvsn.png');
-  background-size: cover;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -209,4 +209,9 @@
     align-self: flex-start;
     width: 100%;
   }
+}
+
+.flips-count {
+  display: flex;
+  justify-content: space-between;
 }

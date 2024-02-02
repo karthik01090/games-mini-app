@@ -5,7 +5,7 @@ import EmojiGame from './components/EmojiGame'
 import RockPaperScissorGame from './components/RockPaperScissorGame'
 import MemoryMatrixGame from './components/MemoryMatrixGame'
 import CardFlipGame from './components/CardFlipGame'
-import CardFlipCards from './components/CardFlipCards'
+// import CardFlipCards from './components/CardFlipCards'
 
 import './App.css'
 
@@ -158,7 +158,7 @@ const App = () => (
     <Route exact path="/emoji-game" component={EmojiGame} />
     <Route exact path="/rock-paper-scissor" component={RockPaperScissorGame} />
     <Route exact path="/memory-matrix" component={MemoryMatrixGame} />
-    <Route exact path="/card-flip-memory-game" component={CardFlipCards} />
+    <Route exact path="/card-flip-memory-game" component={CardFlipGame} />
   </>
 )
 export default App

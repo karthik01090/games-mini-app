@@ -1,6 +1,7 @@
 import {Component} from 'react'
 
 import {BiArrowBack} from 'react-icons/bi'
+import CardFlipCards from '../CardFlipCards'
 
 import './cardFlipGame.css'
 
@@ -32,7 +33,7 @@ class CardFlipGame extends Component {
         <div className="image-container">
           <img
             src="https://res.cloudinary.com/dqbiyti1d/image/upload/v1704346398/vx8katwdus8krcwo92ki.png"
-            alt="rock paper scissor"
+            alt="card flip memory game"
             className="card-flip-memory-image"
           />
         </div>
@@ -71,7 +72,11 @@ class CardFlipGame extends Component {
               </li>
             </div>
           </ul>
-          <button type="button" className="start-playing-btn-game4">
+          <button
+            type="button"
+            className="start-playing-btn-game4"
+            onClick={this.startCardFlipMemoryGame}
+          >
             Start Playing
           </button>
         </div>
@@ -80,21 +85,25 @@ class CardFlipGame extends Component {
   )
 
   renderGamePageView = () => (
-    <div className="card-flip-game-bg-container">
-      <div className="card-flip-game">
-        <div className="buttons-container">
-          <button type="button">Back</button>
-          <button type="button">Rules</button>
-        </div>
-        <h1 className="heading">Card-Flip Memory Game</h1>
-        <div className="card-and-flip-count-container">
-          <div>
-            <p>Card flip count</p>
-            <p>Score</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    // <div className="card-flip-game-bg-container">
+    //   <div className="card-flip-game">
+    //     <div className="buttons-container">
+    //       <button type="button">Back</button>
+    //       <button type="button">Rules</button>
+    //     </div>
+    //     <h1 className="heading">Card-Flip Memory Game</h1>
+    //     <div className="card-and-flip-count-container">
+    //       <div className="flips-count">
+    //         <p>Card flip count</p>
+    //         <p>Score</p>
+    //       </div>
+    //       <div className="card-flip-list-container">
+    //         <CardFlipCards />
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
+    <CardFlipCards />
   )
 
   render() {

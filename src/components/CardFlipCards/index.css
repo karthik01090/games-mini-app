@@ -43,3 +43,12 @@
   background-color: #2a78b8;
   transform: rotateY(180deg);
 }
+
+.game-finished-view-container {
+  background-color: #14332e;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
